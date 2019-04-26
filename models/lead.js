@@ -5,13 +5,13 @@ module.exports = (sequelize, DataTypes) => {
 	var Lead = sequelize.define('Lead', {
 		id: {
 			type: DataTypes.UUID,
-			defaultValue: DataType.UUIDV4,
+			defaultValue: DataTypes.UUIDV4,
 
 			allowNull: false,
 			primaryKey: true
 		},
 		email: {
-			type: DataTypes.String,
+			type: DataTypes.STRING,
 			allowNull: false,
 		},
 	});
