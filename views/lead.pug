@@ -1,9 +1,9 @@
 doctype html
 html(lang='en')
 	include common/head.pug
-	+head("Starter MVP")
+	+head("Lead Detail")
 	body
-		h1 Leads
+		h1 Lead
 		p
 			span #{lead.email}
 			|
@@ -11,5 +11,9 @@ html(lang='en')
 			|
 			form(action="/lead/" + lead.id + "/delete", method="POST")
 				button(type="submit") Delete
+		p
+			a(href= "/leads") Show all leads
+		p
+			a(href= "/") Home
 		include common/footer.pug
 		+footer()

@@ -1,22 +1,16 @@
 doctype html
 html(lang='en')
   include common/head.pug
-  +head("Starter MVP")
+  +head("Home")
   body
     h1= title
     p Welcome to #{title}
     form(action="/", method="POST")
      input(name="lead_email", type="email", placeholder= "Enter your email address")
      button(type="Submit") Submit
-     |
+    p
      a(href="/leads") Show Leads
-    if leads
-       h1 Leads
-       for lead in leads
-           p 
-               span #{lead.email}
-               |
-               a(href="/lead/" + lead.id) Details
+    
   include common/footer.pug
   +footer()
 
